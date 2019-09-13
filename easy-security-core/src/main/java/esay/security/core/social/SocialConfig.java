@@ -56,7 +56,7 @@ public class SocialConfig extends SocialConfigurerAdapter {
         return repository;
     }
 
-    private EasyJdbcConnectionRepository getCustomJdbcConnectionRepository(ConnectionFactoryLocator connectionFactoryLocator) {
+    private EasyJdbcConnectionRepository getEasyJdbcConnectionRepository(ConnectionFactoryLocator connectionFactoryLocator) {
         return new EasyJdbcConnectionRepository(getUserIdSource(), new JdbcTemplate(dataSource), connectionFactoryLocator, Encryptors.noOpText(), "");
     }
 
@@ -66,7 +66,7 @@ public class SocialConfig extends SocialConfigurerAdapter {
     }
 
     @Bean
-    public SpringSocialConfigurer customSocialSecurityConfig() {
+    public SpringSocialConfigurer easySocialSecurityConfig() {
         EasySpringSocialConfigurer configurer = new EasySpringSocialConfigurer(easySecurityProperties.getSocial().getFilterProcessesUrl());
         configurer.signupUrl(easySecurityProperties.getBrowser().getSignUpUrl());
         configurer.setSocialAuthenticationFilterPostProcessor(socialAuthenticationFilterPostProcessor);
@@ -81,6 +81,6 @@ public class SocialConfig extends SocialConfigurerAdapter {
     @Bean
     @ConditionalOnMissingBean({ConnectController.class})
     public ConnectController connectController(ConnectionFactoryLocator factoryLocator) {
-        return new ConnectController(factoryLocator, getCustomJdbcConnectionRepository(factoryLocator));
+        return new ConnectController(factoryLocator, getEasyJdbcConnectionRepository(factoryLocator));
     }
 }

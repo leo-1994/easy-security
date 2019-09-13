@@ -42,7 +42,7 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
     private ValidateCodeSecurityConfig validateCodeSecurityConfig;
 
     @Autowired(required = false)
-    private SpringSocialConfigurer customSocialSecurityConfig;
+    private SpringSocialConfigurer easySocialSecurityConfig;
 
     @Autowired(required = false)
     private InvalidSessionStrategy invalidSessionStrategy;
@@ -71,7 +71,7 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                 .and()
                 .apply(smsCodeAuthenticationSecurityConfig)
                 .and()
-                .apply(customSocialSecurityConfig)
+                .apply(easySocialSecurityConfig)
                 .and()
                 .rememberMe()
                 .tokenRepository(persistentTokenRepository())

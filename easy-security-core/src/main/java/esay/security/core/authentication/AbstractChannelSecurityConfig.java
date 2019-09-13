@@ -14,16 +14,16 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 public class AbstractChannelSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private AuthenticationSuccessHandler customAuthenticationSuccessHandler;
+    private AuthenticationSuccessHandler easyAuthenticationSuccessHandler;
 
     @Autowired
-    private AuthenticationFailureHandler customAuthenticationFailureHandler;
+    private AuthenticationFailureHandler easyAuthenticationFailureHandler;
 
     protected void applyPasswordAuthenticationConfig(HttpSecurity http) throws Exception {
         http.formLogin()
                 .loginPage(EasySecurityConstants.DEFAULT_UN_AUTHENTICATION_URL)
                 .loginProcessingUrl(EasySecurityConstants.DEFAULT_LOGIN_PROCESSING_URL_FORM)
-                .successHandler(customAuthenticationSuccessHandler)
-                .failureHandler(customAuthenticationFailureHandler);
+                .successHandler(easyAuthenticationSuccessHandler)
+                .failureHandler(easyAuthenticationFailureHandler);
     }
 }

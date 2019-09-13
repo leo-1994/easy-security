@@ -5,7 +5,7 @@
     <parent>
         <artifactId>easy-security</artifactId>
         <groupId>com.github.leo-1994</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -27,6 +27,11 @@
 <!--            <groupId>org.springframework.security.oauth</groupId>-->
 <!--            <artifactId>spring-security-oauth2</artifactId>-->
 <!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.security.oauth.boot</groupId>
+            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-jwt</artifactId>

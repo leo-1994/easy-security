@@ -17,9 +17,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class SmsCodeAuthenticationFilter extends AbstractAuthenticationProcessingFilter {
 
-    private static final String CUSTOM_SECURITY_FORM_MOBILE_KEY = "mobile";
+    private static final String EASY_SECURITY_FORM_MOBILE_KEY = "mobile";
 
-    private String mobileParameter = CUSTOM_SECURITY_FORM_MOBILE_KEY;
+    private String mobileParameter = EASY_SECURITY_FORM_MOBILE_KEY;
     private boolean postOnly = true;
 
     public SmsCodeAuthenticationFilter() {

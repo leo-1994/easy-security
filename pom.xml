@@ -6,10 +6,11 @@
 
     <groupId>com.github.leo-1994</groupId>
     <artifactId>easy-security</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <modules>
         <module>easy-security-core</module>
         <module>easy-security-browser</module>
+        <module>easy-security-app</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
@@ -37,6 +38,11 @@
                 <artifactId>spring-security-oauth2</artifactId>
                 <scope>compile</scope>
                 <version>2.3.5.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.security.oauth.boot</groupId>
+                <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+                <version>${spring-boot.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.security</groupId>

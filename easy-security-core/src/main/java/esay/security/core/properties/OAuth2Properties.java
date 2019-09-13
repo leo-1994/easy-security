@@ -11,7 +11,7 @@ public class OAuth2Properties {
 
     private String storeType;
 
-    private String jwtSigningKey = "custom";
+    private String jwtSigningKey = "easy-security";
 
     private OAuth2ClientProperties[] clients = {};
 }
