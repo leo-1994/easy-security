@@ -5,4 +5,10 @@ easy.security.app.EasyAuthorizationServerConfig,\
 easy.security.app.EasyResourceServerConfig,\
 easy.security.app.SpringSocialConfigurePostProcessor,\
 easy.security.app.TokenStoreConfig,\
-easy.security.app.WebSecurityConfig
+easy.security.app.WebSecurityConfig,\
+easy.security.app.validate.code.impl.RedisValidateCodeRepository,\
+easy.security.app.social.AppSignUpUtils,\
+easy.security.app.social.openid.OpenIdAuthenticationSecurityConfig,\
+easy.security.app.social.impl.AppSocialAuthenticationFilterPostProcessor,\
+easy.security.app.authentication.EasyAuthenticationFailureHandler,\
+easy.security.app.authentication.EasyAuthenticationSuccessHandler
