@@ -20,28 +20,28 @@ import org.springframework.social.security.SpringSocialConfigurer;
  */
 @Configuration
 @EnableResourceServer
-public class EasyResourceServerConfig extends ResourceServerConfigurerAdapter {
+class EasyResourceServerConfig extends ResourceServerConfigurerAdapter {
 
-    @Autowired(required = false)
+    @Autowired
     private EasyAuthenticationFailureHandler easyAuthenticationFailureHandler;
 
-    @Autowired(required = false)
+    @Autowired
     private EasyAuthenticationSuccessHandler easyAuthenticationSuccessHandler;
 
-    @Autowired(required = false)
+    @Autowired
     private SmsCodeAuthenticationSecurityConfig smsCodeAuthenticationSecurityConfig;
 
-    @Autowired(required = false)
+    @Autowired
     private SpringSocialConfigurer easySocialSecurityConfig;
 
-    @Autowired(required = false)
+    @Autowired
     private ValidateCodeSecurityConfig validateCodeSecurityConfig;
 
-    @Autowired(required = false)
+    @Autowired
     private OpenIdAuthenticationSecurityConfig openIdAuthenticationSecurityConfig;
 
-    @Autowired(required = false)
-    private AuthorizeConfigManage authorizeConfigManage;
+    @Autowired
+    private AuthorizeConfigManage easyAuthorizeConfigManage;
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
@@ -62,7 +62,7 @@ public class EasyResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .apply(openIdAuthenticationSecurityConfig)
                 .and()
                 .csrf().disable();
-        authorizeConfigManage.config(http.authorizeRequests());
+        easyAuthorizeConfigManage.config(http.authorizeRequests());
     }
 
 }

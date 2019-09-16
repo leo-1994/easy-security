@@ -4,7 +4,6 @@ import easy.security.core.properties.EasySecurityConstants;
 import easy.security.core.properties.EasySecurityProperties;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
-import org.springframework.stereotype.Component;
 import org.springframework.util.AntPathMatcher;
 import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -22,7 +21,6 @@ import java.util.Set;
  * @author chao.li@quvideo.com
  * @date 2019/9/5 17:17
  */
-@Component("validateCodeFilter")
 public class ValidateCodeFilter extends OncePerRequestFilter {
 
     /**

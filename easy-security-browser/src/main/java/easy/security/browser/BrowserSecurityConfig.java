@@ -3,7 +3,7 @@ package easy.security.browser;
 import easy.security.core.ValidateCodeSecurityConfig;
 import easy.security.core.authentication.AbstractChannelSecurityConfig;
 import easy.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
-import easy.security.core.authorize.AuthorizeConfigManage;
+import easy.security.core.authorize.EasyAuthorizeConfigManage;
 import easy.security.core.properties.EasySecurityProperties;
 import easy.security.core.support.EasyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,35 +26,35 @@ import javax.sql.DataSource;
 @Configuration
 public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
 
-    @Autowired(required = false)
+    @Autowired
     private EasySecurityProperties easySecurityProperties;
 
-    @Autowired(required = false)
+    @Autowired
     private DataSource dataSource;
 
     @Autowired
     private EasyUserDetailsService easyUserDetailsService;
 
-    @Autowired(required = false)
+    @Autowired
     private SmsCodeAuthenticationSecurityConfig smsCodeAuthenticationSecurityConfig;
 
-    @Autowired(required = false)
+    @Autowired
     private ValidateCodeSecurityConfig validateCodeSecurityConfig;
 
-    @Autowired(required = false)
+    @Autowired
     private SpringSocialConfigurer easySocialSecurityConfig;
 
-    @Autowired(required = false)
+    @Autowired
     private InvalidSessionStrategy invalidSessionStrategy;
 
-    @Autowired(required = false)
+    @Autowired
     private SessionInformationExpiredStrategy sessionInformationExpiredStrategy;
 
     @Autowired
     private LogoutSuccessHandler logoutSuccessHandler;
 
     @Autowired
-    private AuthorizeConfigManage authorizeConfigManage;
+    private EasyAuthorizeConfigManage easyAuthorizeConfigManage;
 
     @Bean
     public PersistentTokenRepository persistentTokenRepository() {
@@ -94,6 +94,6 @@ public class BrowserSecurityConfig extends AbstractChannelSecurityConfig {
                 .deleteCookies("JSESSIONID")
                 .and()
                 .csrf().disable();
-        authorizeConfigManage.config(http.authorizeRequests());
+        easyAuthorizeConfigManage.config(http.authorizeRequests());
     }
 }

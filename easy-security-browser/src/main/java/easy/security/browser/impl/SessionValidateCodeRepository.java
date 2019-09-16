@@ -5,14 +5,12 @@ import easy.security.core.validate.code.ValidateCodeRepository;
 import easy.security.core.validate.code.ValidateCodeType;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
 import org.springframework.social.connect.web.SessionStrategy;
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
 
 /**
  * @author chao.li@quvideo.com
  * @date 2019/9/10 17:43
  */
-@Component
 public class SessionValidateCodeRepository implements ValidateCodeRepository {
     /**
      * 校验码放入session时的前缀

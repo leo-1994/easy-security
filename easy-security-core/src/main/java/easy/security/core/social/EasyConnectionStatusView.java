@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSON;
 import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.http.MediaType;
 import org.springframework.social.connect.Connection;
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.view.AbstractView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +16,6 @@ import java.util.Map;
  * @author chao.li@quvideo.com
  * @date 2019/9/9 10:30
  */
-@Component("connect/status")
 public class EasyConnectionStatusView extends AbstractView {
     @SuppressWarnings("unchecked")
     @Override

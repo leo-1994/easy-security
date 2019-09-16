@@ -3,8 +3,6 @@ package easy.security.core.validate.code.sms;
 import easy.security.core.properties.EasySecurityConstants;
 import easy.security.core.validate.code.ValidateCode;
 import easy.security.core.validate.code.impl.AbstractValidateCodeProcessor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.context.request.ServletWebRequest;
 
@@ -12,10 +10,12 @@ import org.springframework.web.context.request.ServletWebRequest;
  * @author chao.li@quvideo.com
  * @date 2019/9/6 10:50
  */
-@Component("smsValidateCodeProcessor")
 public class SmsCodeProcessor extends AbstractValidateCodeProcessor<ValidateCode> {
-    @Autowired
-    private SmsCodeSender smsCodeSender;
+    private final SmsCodeSender smsCodeSender;
+
+    public SmsCodeProcessor(SmsCodeSender smsCodeSender) {
+        this.smsCodeSender = smsCodeSender;
+    }
 
     @Override
     protected void send(ServletWebRequest request, ValidateCode validateCode) throws Exception {

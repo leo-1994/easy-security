@@ -36,10 +36,10 @@ public class SocialConfig extends SocialConfigurerAdapter {
     @Autowired
     private EasySecurityProperties easySecurityProperties;
 
-    @Autowired(required = false)
+    @Autowired
     private ConnectionSignUp connectionSignUp;
 
-    @Autowired(required = false)
+    @Autowired
     private SocialAuthenticationFilterPostProcessor socialAuthenticationFilterPostProcessor;
 
     private JdbcUsersConnectionRepository repository;

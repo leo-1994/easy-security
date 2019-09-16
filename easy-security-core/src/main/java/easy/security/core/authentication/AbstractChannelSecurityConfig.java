@@ -13,10 +13,10 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
  */
 public class AbstractChannelSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
+    @Autowired(required = false)
     private AuthenticationSuccessHandler easyAuthenticationSuccessHandler;
 
-    @Autowired
+    @Autowired(required = false)
     private AuthenticationFailureHandler easyAuthenticationFailureHandler;
 
     protected void applyPasswordAuthenticationConfig(HttpSecurity http) throws Exception {

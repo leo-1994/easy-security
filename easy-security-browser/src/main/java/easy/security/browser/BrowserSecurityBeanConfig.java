@@ -1,5 +1,8 @@
 package easy.security.browser;
 
+import easy.security.browser.authentication.EasyAuthenticationFailureHandler;
+import easy.security.browser.authentication.EasyAuthenticationSuccessHandler;
+import easy.security.browser.impl.SessionValidateCodeRepository;
 import easy.security.browser.logout.EasyLogoutSuccessHandler;
 import easy.security.browser.session.EasyExpireSessionStrategy;
 import easy.security.browser.session.EasyInvalidSessionStrategy;
@@ -40,4 +43,18 @@ public class BrowserSecurityBeanConfig {
         return new EasyLogoutSuccessHandler(easySecurityProperties.getBrowser().getSignOutUrl());
     }
 
+    @Bean
+    public EasyAuthenticationSuccessHandler easyAuthenticationSuccessHandler(){
+        return new EasyAuthenticationSuccessHandler(easySecurityProperties);
+    }
+
+    @Bean
+    public EasyAuthenticationFailureHandler easyAuthenticationFailureHandler(){
+        return new EasyAuthenticationFailureHandler(easySecurityProperties);
+    }
+
+    @Bean
+    public SessionValidateCodeRepository sessionValidateCodeRepository(){
+        return new SessionValidateCodeRepository();
+    }
 }

@@ -18,6 +18,7 @@
         <easy.security.version>1.0.0</easy.security.version>
         <spring-boot.version>2.1.7.RELEASE</spring-boot.version>
         <spring-social.version>1.1.6.RELEASE</spring-social.version>
+        <project.build.outputDirectory>target/classes</project.build.outputDirectory>
     </properties>
     <dependencyManagement>
         <dependencies>

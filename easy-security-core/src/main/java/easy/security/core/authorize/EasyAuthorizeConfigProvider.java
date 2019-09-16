@@ -12,11 +12,13 @@ import org.springframework.stereotype.Component;
  * @author chao.li@quvideo.com
  * @date 2019/9/11 19:34
  */
-@Order(Integer.MIN_VALUE)
-@Component
 public class EasyAuthorizeConfigProvider implements AuthorizeConfigProvider {
-    @Autowired
-    private EasySecurityProperties easySecurityProperties;
+    private final EasySecurityProperties easySecurityProperties;
+
+    public EasyAuthorizeConfigProvider(EasySecurityProperties easySecurityProperties) {
+        this.easySecurityProperties = easySecurityProperties;
+    }
+
 
     @Override
     public void config(ExpressionUrlAuthorizationConfigurer<HttpSecurity>.ExpressionInterceptUrlRegistry config) {

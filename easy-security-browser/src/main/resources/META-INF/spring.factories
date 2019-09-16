@@ -1,6 +1,6 @@
 # easy-security-browser
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 easy.security.browser.BrowserSecurityConfig,\
-easy.security.browser.BrowserSecurityBeanConfig,\
-easy.security.core.EasySecurityCoreConfig,\
-easy.security.core.ValidateCodeSecurityConfig
+easy.security.browser.BrowserSecurityBeanConfig
+org.springframework.security.web.authentication.AuthenticationSuccessHandler=easy.security.browser.authentication.EasyAuthenticationSuccessHandler
+org.springframework.security.web.authentication.AuthenticationFailureHandler=easy.security.browser.authentication.EasyAuthenticationFailureHandler
