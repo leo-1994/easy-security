@@ -1,0 +1,8 @@
+# easy-security-app
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+easy.security.app.AppSecurityController,\
+easy.security.app.EasyAuthorizationServerConfig,\
+easy.security.app.EasyResourceServerConfig,\
+easy.security.app.SpringSocialConfigurePostProcessor,\
+easy.security.app.TokenStoreConfig,\
+easy.security.app.WebSecurityConfig

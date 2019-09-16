@@ -6,4 +6,5 @@ easy.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig,\
 easy.security.core.social.SocialConfig,\
 easy.security.core.social.qq.config.QQAutoConfig,\
 easy.security.core.social.wx.config.WxAutoConfig,\
-easy.security.core.validate.code.ValidateCodeBeanConfig
+easy.security.core.validate.code.ValidateCodeBeanConfig,\
+easy.security.core.validate.code.ValidateCodeController

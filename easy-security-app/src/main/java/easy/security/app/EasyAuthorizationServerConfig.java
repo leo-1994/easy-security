@@ -30,25 +30,25 @@ import java.util.List;
 @Configuration
 public class EasyAuthorizationServerConfig
         extends AuthorizationServerConfigurerAdapter {
-    @Autowired(required = false)
+    @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Autowired(required = false)
+    @Autowired
     private AuthenticationManager authenticationManager;
 
-    @Autowired(required = false)
+    @Autowired
     private EasyUserDetailsService easyUserDetailsService;
 
-    @Autowired(required = false)
+    @Autowired
     private EasySecurityProperties easySecurityProperties;
 
-    @Autowired(required = false)
+    @Autowired
     private TokenStore tokenStore;
 
-    @Autowired(required = false)
+    @Autowired
     private TokenEnhancer jwtTokenEnhancer;
 
-    @Autowired(required = false)
+    @Autowired
     private JwtAccessTokenConverter jwtAccessTokenConverter;
 
     @Override
