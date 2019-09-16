@@ -1,0 +1,6 @@
+# easy-security-browser
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+easy.security.browser.BrowserSecurityConfig,\
+easy.security.browser.BrowserSecurityBeanConfig,\
+easy.security.core.EasySecurityCoreConfig,\
+easy.security.core.ValidateCodeSecurityConfig

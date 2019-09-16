@@ -1,9 +1,9 @@
 package easy.security.app.validate.code.impl;
 
-import esay.security.core.validate.code.ValidateCode;
-import esay.security.core.validate.code.ValidateCodeException;
-import esay.security.core.validate.code.ValidateCodeRepository;
-import esay.security.core.validate.code.ValidateCodeType;
+import easy.security.core.validate.code.ValidateCode;
+import easy.security.core.validate.code.ValidateCodeException;
+import easy.security.core.validate.code.ValidateCodeRepository;
+import easy.security.core.validate.code.ValidateCodeType;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

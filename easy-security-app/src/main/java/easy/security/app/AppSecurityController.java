@@ -1,7 +1,7 @@
 package easy.security.app;
 
 import easy.security.app.social.AppSignUpUtils;
-import esay.security.core.social.support.SocialUserInfo;
+import easy.security.core.social.support.SocialUserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.social.connect.Connection;

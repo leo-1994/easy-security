@@ -3,7 +3,7 @@ package easy.security.browser;
 import easy.security.browser.logout.EasyLogoutSuccessHandler;
 import easy.security.browser.session.EasyExpireSessionStrategy;
 import easy.security.browser.session.EasyInvalidSessionStrategy;
-import esay.security.core.properties.EasySecurityProperties;
+import easy.security.core.properties.EasySecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;

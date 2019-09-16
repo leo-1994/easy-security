@@ -1,11 +1,11 @@
 package easy.security.browser;
 
-import esay.security.core.ValidateCodeSecurityConfig;
-import esay.security.core.authentication.AbstractChannelSecurityConfig;
-import esay.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
-import esay.security.core.authorize.AuthorizeConfigManage;
-import esay.security.core.properties.EasySecurityProperties;
-import esay.security.core.support.EasyUserDetailsService;
+import easy.security.core.ValidateCodeSecurityConfig;
+import easy.security.core.authentication.AbstractChannelSecurityConfig;
+import easy.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
+import easy.security.core.authorize.AuthorizeConfigManage;
+import easy.security.core.properties.EasySecurityProperties;
+import easy.security.core.support.EasyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

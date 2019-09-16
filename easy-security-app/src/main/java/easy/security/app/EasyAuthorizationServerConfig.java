@@ -1,8 +1,8 @@
 package easy.security.app;
 
-import esay.security.core.properties.EasySecurityProperties;
-import esay.security.core.properties.OAuth2ClientProperties;
-import esay.security.core.support.EasyUserDetailsService;
+import easy.security.core.properties.EasySecurityProperties;
+import easy.security.core.properties.OAuth2ClientProperties;
+import easy.security.core.support.EasyUserDetailsService;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

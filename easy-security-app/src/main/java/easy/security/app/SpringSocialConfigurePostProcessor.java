@@ -1,6 +1,6 @@
 package easy.security.app;
 
-import esay.security.core.social.EasySpringSocialConfigurer;
+import easy.security.core.social.EasySpringSocialConfigurer;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

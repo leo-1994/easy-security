@@ -1,7 +1,7 @@
 package easy.security.app;
 
 import easy.security.app.jwt.EasyTokenEnhancer;
-import esay.security.core.properties.EasySecurityProperties;
+import easy.security.core.properties.EasySecurityProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

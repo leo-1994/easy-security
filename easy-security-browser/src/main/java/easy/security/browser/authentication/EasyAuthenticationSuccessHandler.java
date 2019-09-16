@@ -1,8 +1,8 @@
 package easy.security.browser.authentication;
 
 import com.alibaba.fastjson.JSON;
-import esay.security.core.properties.EasySecurityProperties;
-import esay.security.core.properties.LoginType;
+import easy.security.core.properties.EasySecurityProperties;
+import easy.security.core.properties.LoginType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

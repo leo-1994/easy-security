@@ -1,8 +1,8 @@
 package easy.security.browser.impl;
 
-import esay.security.core.validate.code.ValidateCode;
-import esay.security.core.validate.code.ValidateCodeRepository;
-import esay.security.core.validate.code.ValidateCodeType;
+import easy.security.core.validate.code.ValidateCode;
+import easy.security.core.validate.code.ValidateCodeRepository;
+import easy.security.core.validate.code.ValidateCodeType;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
 import org.springframework.social.connect.web.SessionStrategy;
 import org.springframework.stereotype.Component;

@@ -1,8 +1,8 @@
 package easy.security.browser;
 
-import esay.security.core.properties.EasySecurityProperties;
-import esay.security.core.social.support.SocialUserInfo;
-import esay.security.core.support.SimpleResponse;
+import easy.security.core.properties.EasySecurityProperties;
+import easy.security.core.social.support.SocialUserInfo;
+import easy.security.core.support.SimpleResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
