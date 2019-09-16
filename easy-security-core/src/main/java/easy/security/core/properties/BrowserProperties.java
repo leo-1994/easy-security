@@ -14,7 +14,7 @@ public class BrowserProperties {
 
     private String signUpUrl = EasySecurityConstants.DEFAULT_SIGN_UP_URL;
 
-    private String signOutUrl;
+    private String signOutUrl = EasySecurityConstants.DEFAULT_SIGN_OUT_URL;
 
     private int rememberMeSeconds = 3600;
 

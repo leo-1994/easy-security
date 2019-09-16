@@ -34,6 +34,10 @@ public class EasySecurityConstants {
      */
     public static final String DEFAULT_SIGN_UP_URL = "/signUp.html";
     /**
+     * 默认退出页面
+     */
+    public static final String DEFAULT_SIGN_OUT_URL = "/logout.html";
+    /**
      * 验证图片验证码时，http请求中默认的携带图片验证码信息的参数的名称
      */
     public static final String DEFAULT_PARAMETER_NAME_CODE_IMAGE = "imageCode";

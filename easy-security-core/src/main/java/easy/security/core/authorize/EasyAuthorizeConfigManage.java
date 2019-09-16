@@ -22,5 +22,6 @@ public class EasyAuthorizeConfigManage implements AuthorizeConfigManage {
         for (AuthorizeConfigProvider authorizeConfigProvider : authorizeConfigProviderList) {
             authorizeConfigProvider.config(config);
         }
+        config.anyRequest().authenticated();
     }
 }
